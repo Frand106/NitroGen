@@ -77,7 +77,7 @@ class NitroGen:  # Initialise the class
                 self.valid.append(s)
 
         except Exception as e:  # If the request fails
-            print(f" Error | " + str(e))  # Tell the user an error occurred
+            print(f" Ошибка | " + str(e))  # Tell the user an error occurred
 
     async def quickChecker(self, nitro: str, notify=None):  # Used to check a single code at a time
         # Generate the request url
@@ -90,7 +90,7 @@ class NitroGen:  # Initialise the class
 
         if status_code == 200:  # If the responce went through
             # Notify the user the code was valid
-            print(f" Valid | " + nitro)
+            print(f" Валид | " + nitro)
             with open("Nitro Codes.txt", "w") as file:  # Open file to write
                 # Write the nitro code to the file it will automatically add a newline
                 file.write(str(nitro) + '\n')
@@ -100,7 +100,7 @@ class NitroGen:  # Initialise the class
         # If the responce got ignored or is invalid ( such as a 404 or 405 )
         else:
             # Tell the user it tested a code and it was invalid
-            print(f" Invalid | " + nitro)
+            print(f" Невалид | " + nitro)
             return False  # Tell the main function there was not a code found
 
 
