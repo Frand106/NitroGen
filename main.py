@@ -40,7 +40,7 @@ class NitroGen:  # Initialise the class
     async def main(self):  # The main function contains the most important code
         # Print the first question
         num = input('Сколько кодов сгенерировать и проверить?: ')
-        start_time = time.time()
+        #start_time = time.time()
         if num.isdigit():
             num = int(num)  # Ask the user for the amount of codes
         else:
